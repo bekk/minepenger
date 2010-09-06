@@ -7,6 +7,16 @@ gem 'rails', '3.0.0'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+# Cucumber for Rails 3 stuff:
+gem 'capybara'
+gem 'database_cleaner'
+gem 'cucumber-rails'
+gem 'cucumber'
+gem 'rspec-rails'
+#gem 'spork'
+gem 'launchy' # So you can do Then show me the page
+# End Cucumber
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
