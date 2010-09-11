@@ -1,17 +1,36 @@
 Minepenger::Application.routes.draw do
-  resources :users
+  resources :oauth , :controller => 'oauth' do
+    collection do
+      get :start
+      get :callback
+      get :test
+    end
+  end
 
-  resource :session, :only => [:new, :create, :destroy]
+  resources :welcome , :controller => 'welcome' do
+    collection do
+      get :index
+    end
+  end
 
-  match 'signup' => 'users#new', :as => :signup
+  root  :to => 'oauth#start'
 
-  match 'register' => 'users#create', :as => :register
 
-  match 'login' => 'sessions#new', :as => :login
 
-  match 'logout' => 'sessions#destroy', :as => :logout
 
-  match '/activate/:activation_code' => 'users#activate', :as => :activate, :activation_code => nil
+  #resources :users
+
+  #resource :session, :only => [:new, :create, :destroy]
+
+  #match 'signup' => 'users#new', :as => :signup
+
+  #match 'register' => 'users#create', :as => :register
+
+  #match 'login' => 'sessions#new', :as => :login
+
+  #match 'logout' => 'sessions#destroy', :as => :logout
+
+  #match '/activate/:activation_code' => 'users#activate', :as => :activate, :activation_code => nil
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
