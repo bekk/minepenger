@@ -1,0 +1,10 @@
+#header { width: 100%; height: 156px; background: #000; border-bottom: 2px solid #B9A599; }
+#top-header-content { width: 950px; margin-left: auto; margin-right: auto; }
+#top-header-image { background: url('../images/bekk_logo_header.gif') no-repeat; width: 125px; height: 36px; float: left;}
+#top-header-login-info { float: right; font-weight: bold; color: #B0A599;}
+#main-header { height: 120px; border-top: 2px solid #B0A599; background: #F3F3F3; top: 36px; position: relative; }
+#main-header-content { width: 950px; margin-left: auto; margin-right: auto; }
+#main-header-logo { background: url('../images/minepenger.png') no-repeat; width: 300px; height: 120px;}
+
+
+#main { width: 950px; margin-left: auto; margin-right: auto; }
