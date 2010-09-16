@@ -1,5 +1,43 @@
+# OSX
+.DS_Store
+
+# Misc
+*.log
+*.log.1
+*.log.2
+*.log.3
+*.log.4
+*.log.5
+*.orig
+*.bak
+*.class
+*~
+.\#*
+*.old
+
+# IDEA
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# Eclipse
+.project
+.settings
+.classpath
+.manager
+
+# Netbeans
+nb-configuration.xml
+nbactions.xml
+
+# DB
+*.sqlite3
+*.db
+
+# IDEA Ruby Plugin
+.generators
+.rakeTasks
+
 .bundle
-db/*.sqlite3
-log/*.log
-tmp/**/*
-.idea/*
+tmp/
