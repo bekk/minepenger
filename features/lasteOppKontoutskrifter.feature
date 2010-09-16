@@ -1,6 +1,6 @@
 # language: no
 Egenskap: Laste opp kontoutskrifter
-	Beskrivelse....
+	Beskrivelse...
 
 	Scenario: Laste opp kontoutskrift fra Skandiabanken
 	Gitt at jeg er logget inn på Mine penger
