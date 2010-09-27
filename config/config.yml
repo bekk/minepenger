@@ -1,0 +1,9 @@
+# config/config.yml
+development:
+  url: http://localhost:3000
+
+production:
+  url: http://minepenger.heroku.com
+
+test:
+  url: 3002
