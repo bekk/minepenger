@@ -6,4 +6,4 @@ production:
   url: http://minepenger.heroku.com
 
 test:
-  url: 3002
+  url: http://localhost:3000
