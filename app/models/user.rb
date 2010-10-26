@@ -2,7 +2,8 @@ require 'digest/sha1'
 
 class User < ActiveRecord::Base
   set_table_name 'users'
-
+  has_many :transactions
+  has_many :accounts
   validates :login, :presence   => true,
                     :uniqueness => true,
                     :length     => { :within => 3..40 }
