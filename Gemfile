@@ -2,6 +2,10 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0'
 
+# Heroku
+gem 'heroku'
+#gem 'taps'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
