@@ -14,7 +14,7 @@ describe TransactionParser::Formats::FlekkefjordSparebank do
     end
 
     it "should return transactions according to the input string" do
-      data = IO.read(File.dirname(__FILE__) + "/flekkefjord_sparebank.log")
+      data = IO.read(File.dirname(__FILE__) + "/flekkefjord_sparebank.csv")
 
       transactions = @format.parse(data)
 

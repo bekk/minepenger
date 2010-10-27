@@ -13,10 +13,9 @@ Minepenger::Application.routes.draw do
     end
   end
 
+  resources :transactions
+
   root  :to => 'oauth#start'
-
-
-
 
   #resources :users
 
