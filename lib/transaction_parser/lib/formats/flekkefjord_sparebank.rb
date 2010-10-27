@@ -4,8 +4,8 @@ module TransactionParser::Formats
 
   class FlekkefjordSparebank
 
-    def self.parse(data)
-      data.split("\n").select { |line| line =~ /^\d/ }.collect do |line|
+    def self.parse(file)
+      file.readlines.select { |line| line =~ /^\d/ }.collect do |line|
         fields = line.split("\t")
         
         transaction = {}
