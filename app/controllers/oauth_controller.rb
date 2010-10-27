@@ -1,12 +1,12 @@
 class OauthController < ApplicationController
 
   def start
-    #redirect_to client.authorization.authorize_url(:redirect_uri => 'http://localhost:3000/oauth/callback'  , :scope => '')
-    redirect_to client.authorization.authorize_url(:redirect_uri => APP_CONFIG.url + '/oauth/callback', :scope => '')
+    redirect_to client.authorization.authorize_url(:redirect_uri => 'http://localhost:3000/oauth/callback'  , :scope => '')
+    #redirect_to client.authorization.authorize_url(:redirect_uri => APP_CONFIG.url + '/oauth/callback', :scope => '')
   end
 
   def callback
-    access_token = client.authorization.process_callback(params[:code], :redirect_uri => APP_CONFIG.url + '/oauth/callback')
+    access_token = client.authorization.process_callback(params[:code], :redirect_uri => 'http://localhost:3000/oauth/callback')
     session[:access_token] = access_token
     user_json = client.selection.me.info!
     session[:name] = user_json.name
