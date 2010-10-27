@@ -1,0 +1,9 @@
+<h1>Importér transaksjonslogg</h1>
+
+<p>Her kan du importére transaksjonslogger fra nettbanken din.</p>
+
+<%= form_tag({:action => :create}, :multipart => true) do %>
+  <%= select_tag('format', options_for_select(@formats)) %><br /><br />
+  <%= file_field_tag('file') %><br /><br />
+  <%= submit_tag('Importér') %>
+<% end %>
