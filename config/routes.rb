@@ -1,4 +1,7 @@
 Minepenger::Application.routes.draw do
+  resources :accounts
+
+  match ':controller(/:action(/:id(.:format)))'
   resources :oauth , :controller => 'oauth' do
     collection do
       get :start
