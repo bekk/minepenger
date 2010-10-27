@@ -40,5 +40,6 @@ nbactions.xml
 .generators
 .rakeTasks
 
+Gemfile.lock
 .bundle
 tmp/
