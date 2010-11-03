@@ -6,7 +6,7 @@ describe TransactionParser do
 
     it "should not return any formats when none is present" do
       TransactionParser::Formats.should_receive(:constants)
-	.and_return([])
+        .and_return([])
 
       TransactionParser.formats.should == []
     end
@@ -15,7 +15,7 @@ describe TransactionParser do
       class TransactionParser::Formats::Test; end
 
       TransactionParser::Formats.should_receive(:constants)
-	.and_return([:Test])
+        .and_return([:Test])
 
       TransactionParser.formats.should == [:Test]
     end

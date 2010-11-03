@@ -6,9 +6,10 @@ class TransactionsController < ApplicationController
 
   def create
     if params[:file]
-      
+      render :text => params.inspect      
       
     else
+      @formats = TransactionParser.formats
       render('new')
     end
   end

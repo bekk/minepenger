@@ -2,6 +2,8 @@
 
 <p>Her kan du importére transaksjonslogger fra nettbanken din.</p>
 
+<% @formats = TransactionParser.formats.collect { |f| f.to_s.titleize } %>
+
 <%= form_tag({:action => :create}, :multipart => true) do %>
   <%= select_tag('format', options_for_select(@formats)) %><br /><br />
   <%= file_field_tag('file') %><br /><br />
