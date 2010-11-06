@@ -1,0 +1,20 @@
+<h1>Transactioner</h1>
+
+<table>
+  <tr>
+    <th>Dato</th>
+    <th>Tekst</th>
+    <th>Kr</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @transactions.each do |t| %>
+  <tr>
+    <td><%= t.date %></td>
+    <td><%= t.merchant %></td>
+    <td><%= t.amount %></td>
+  </tr>
+<% end %>
+</table>

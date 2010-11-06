@@ -41,6 +41,7 @@ class AccountsController < ApplicationController
   # POST /accounts.xml
   def create
     @account = Account.new(params[:account])
+    @account.user_id = session[:user_id]
     respond_to do |format|
       if @account.save
         format.html { redirect_to(@account, :notice => 'Account was successfully created.') }

@@ -22,11 +22,11 @@ describe TransactionParser::Formats::Skandiabanken do
       transactions.size.should == 2
       
       transactions[0][:date].should == Date.new(2004, 10, 31)
-      transactions[0][:text].should == "KREDITRENTER"
+      transactions[0][:merchant].should == "KREDITRENTER"
       transactions[0][:amount].should == 1.95
       
       transactions[1][:date].should == Date.new(2004, 10, 30)
-      transactions[1][:text].should == "28.10 COOP MEGA MOHOLT TRONDHEIM"
+      transactions[1][:merchant].should == "28.10 COOP MEGA MOHOLT TRONDHEIM"
       transactions[1][:amount].should == -17.9
     end
 

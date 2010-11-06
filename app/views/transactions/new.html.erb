@@ -2,10 +2,17 @@
 
 <p>Her kan du importére transaksjonslogger fra nettbanken din.</p>
 
-<% @formats = TransactionParser.formats.collect { |f| f.to_s.titleize } %>
+<%
+   @formats = TransactionParser.formats.collect { |f| f.to_s.titleize }
+  @accounts = Account.all.collect { |a| a.name.titleize }
+%>
 
 <%= form_tag({:action => :create}, :multipart => true) do %>
+  Konto:
+  <%= select_tag('account', options_for_select(@accounts)) %>(temp: opprett en bankkonto om du ikke har gjort det)<br/><br/>
+  Kontoutskriftsformat:
   <%= select_tag('format', options_for_select(@formats)) %><br /><br />
+  Kontoutskrift:
   <%= file_field_tag('file') %><br /><br />
   <%= submit_tag('Importér') %>
 <% end %>

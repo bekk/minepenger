@@ -8,5 +8,4 @@ class TransactionParser
       Formats.const_get(const)
     end
   end
-
 end

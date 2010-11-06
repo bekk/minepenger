@@ -19,7 +19,7 @@ module TransactionParser::Formats
         end
         transaction = {}
         transaction[:date] = row[1]
-        transaction[:text] = row[5]
+        transaction[:merchant] = row[5]
         if row[7] != nil # debit
 	        transaction[:amount] = row[7]
         else # credit

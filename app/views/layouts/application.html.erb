@@ -12,7 +12,7 @@
         <div id="top-header-content">
           <div id="top-header-image"></div>
           <div id="top-header-login-info">
-            <%= session[:name] %> | <a href="#">Logg ut</a>
+            <%= session[:name] %> | <%= link_to 'Logg av', 'sessions/destroy' %>
           </div>
         </div>
         <div id="main-header">

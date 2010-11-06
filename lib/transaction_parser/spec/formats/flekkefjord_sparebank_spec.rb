@@ -22,11 +22,11 @@ describe TransactionParser::Formats::FlekkefjordSparebank do
 
       transactions.size.should == 2
       transactions[0][:date].should == Date.new(2010, 9, 17)
-      transactions[0][:text].should == 
+      transactions[0][:merchant].should ==
         "16.09 NARVESEN 365 LERKENDAL ST TRONDHEIM"
       transactions[0][:amount].should == -14
       transactions[1][:date].should == Date.new(2010, 8, 5)
-      transactions[1][:text].should == "BEKK CONSULTING AS"
+      transactions[1][:merchant].should == "BEKK CONSULTING AS"
       transactions[1][:amount].should == 349.76
     end
 

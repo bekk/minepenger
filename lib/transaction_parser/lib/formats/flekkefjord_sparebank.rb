@@ -10,7 +10,7 @@ module TransactionParser::Formats
         
         transaction = {}
         transaction[:date] = Date.strptime(fields[0], "%d.%m.%Y")
-        transaction[:text] = fields[1]
+        transaction[:merchant] = fields[1]
 
         if fields[2].strip != ""
           transaction[:amount] = - fields[2].sub(',', '.').to_f

@@ -11,6 +11,7 @@ class OauthController < ApplicationController
     user_json = client.selection.me.info!
     session[:name] = user_json.name
     User.create(:login => user_json.id, :email => user_json.id, :name => user_json.name) unless User.exists?(:login => user_json.id)
+    session[:user_id] = User.where({ :login => user_json.id }).first.id
 
     redirect_to :controller => 'welcome', :action => 'index'
   end

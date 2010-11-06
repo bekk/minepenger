@@ -1,1 +1,4 @@
 <h1>Velkommen <%= session[:name] %></h1>
+<%= link_to 'Bankkontoer', accounts_path %><br/>
+<%= link_to 'Transaksjoner', transactions_path %><br/>
+<%= link_to 'Last opp bankutskrift', transactions_path + '/create' %>
