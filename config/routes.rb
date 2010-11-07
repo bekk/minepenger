@@ -1,5 +1,8 @@
 Minepenger::Application.routes.draw do
-  resources :accounts
+
+
+  match "transactions/:year(/:month)" => "transactions#index", :constraints => { :year => /\d{4}/, :month => /\d{1,2}/}
+
 
   match ':controller(/:action(/:id(.:format)))'
   resources :oauth , :controller => 'oauth' do
@@ -17,6 +20,7 @@ Minepenger::Application.routes.draw do
   end
 
   resources :transactions
+  resources :accounts
 
   root  :to => 'oauth#start'
 

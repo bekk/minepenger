@@ -1,10 +1,15 @@
 class TransactionsController < ApplicationController
 
   def index
-    @transactions = Transaction.all
-
-    respond_to do |format|
-      format.html # index.html.erb
+    # Fasetteringsmulighet /transactions/2010/12
+    if params[:year]
+      if params[:month]
+        @transactions = Transaction.where(:date => DateTime.new(params[:year].to_f, params[:month].to_f, 1)..DateTime.new(params[:year].to_f, params[:month].to_f, -1, -1))
+      else
+        @transactions = Transaction.where(:date => DateTime.new(params[:year].to_f, 1, 1)..DateTime.new(params[:year].to_f, -1, -1))
+      end
+    else
+      @transactions = Transaction.all
     end
   end
 
@@ -29,5 +34,4 @@ class TransactionsController < ApplicationController
       render('new')
     end
   end
-
 end
